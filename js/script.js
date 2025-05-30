@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.querySelector('.mobile-header .nav-toggle');
   const nav = document.querySelector('.nav-links');
-
   btn.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
@@ -188,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
 
 

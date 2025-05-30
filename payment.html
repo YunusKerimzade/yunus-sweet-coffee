@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Yunus’s Sweet Coffee — Your cozy spot in Baku for the finest brews and sweet moments.">
+  <title>Payment — Yunus's Sweet Coffee</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* payment.html specific */
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Yunus's Sweet Coffee</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="payment-page">
+    <h1>Complete Your Order</h1>
+    <p class="total">Total: ₼<span id="total">0.00</span></p>
+    <form id="payment-form" novalidate>
+      <label>
+        Card Type
+        <select name="cardType" required>
+          <option value="">Select card</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="amex">American Express</option>
+          <option value="discover">Discover</option>
+        </select>
+        <span class="error" id="err-type"></span>
+      </label>
+
+      <label>
+        Card Number
+        <input type="text"
+               name="cardNumber"
+               placeholder="1234 5678 9012 3456"
+               maxlength="19"
+               inputmode="numeric"
+               pattern="[\d ]{16}"
+               required>
+        <span class="error" id="err-number"></span>
+      </label>
+
+      <label>
+        Expiry Date
+        <input type="month"
+               name="expiry"
+               min="<?= new Date().toISOString().slice(0,7) ?>"
+               required>
+        <span class="error" id="err-expiry"></span>
+      </label>
+
+      <label>
+        CVC
+        <input type="text"
+               name="cvc"
+               placeholder="123"
+               maxlength="3"
+               pattern="\d{3}"
+               required>
+        <span class="error" id="err-cvc"></span>
+      </label>
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>Yunus's Sweet Coffee — your cozy spot in Baku. We roast with ❤️ and serve with ☕.</p><br>
+        <div class="socials">
+          <a href="https://www.facebook.com/YunusSweetCoffee" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="24" height="24"/>
+          </a>
+          <a href="https://www.instagram.com/YunusSweetCoffee" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="24" height="24"/>
+          </a>
+          <a href="https://x.com/YunusSweetCoffee" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" width="24" height="24"/>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact & Hours</h3>
+        <p><strong>Address:</strong><br>123 Coffee St., Baku</p>
+        <p><strong>Phone:</strong><br>+994 12 345 6789</p>
+        <p><strong>Hours:</strong><br>Mon–Fri: 8am–8pm<br>Sat–Sun: 9am–6pm</p>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>Get our latest blends & offers:</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Yunus's Sweet Coffee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js">
+    
+  </script>
+</body>
+</html>

@@ -81,6 +81,44 @@
     padding: 0.5rem 1rem;
   }
 }
+/* Сначала по умолчанию прячем мобильную навигацию */
+.mobile-nav {
+  display: none;
+}
+
+/* На экранах до 768px: прячем .navbar, показываем .mobile-nav */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #ddd;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    z-index: 1000;
+  }
+
+  .mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.75rem;
+  }
+
+  .mobile-nav a i {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+  }
+}
 
 .hero {
   background: url('https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?cs=srgb&dl=pexels-apgpotr-683039.jpg&fm=jpg')  no-repeat center center;

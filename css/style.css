@@ -437,15 +437,18 @@ color: #e63946;
 font-size: 13px;
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
   .nav-links {
-    display: none;
-    flex-direction: column;
-  }
-  .nav-toggle {
-    display: block;
-  }
-  .nav-links.active {
-    display: flex;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #ddd;
+    width: 150px;        
+    z-index: 1000;
   }
 }
+

@@ -174,5 +174,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
   });
 });
 
+// Navbar 
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn  = document.querySelector('.nav-toggle');
+    const nav  = document.querySelector('.nav-links');
+
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  });
+
 
 

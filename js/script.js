@@ -175,14 +175,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
 });
 
 // Navbar 
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn  = document.querySelector('.nav-toggle');
-    const nav  = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.mobile-header .nav-toggle');
+  const nav = document.querySelector('.nav-links');
 
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('active');
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
     });
   });
+});
+
 
 
 

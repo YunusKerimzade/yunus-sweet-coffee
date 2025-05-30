@@ -181,12 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('active');
     });
   });
 });
+
 
 
 
